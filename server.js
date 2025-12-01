@@ -18,7 +18,7 @@ const mongoose = require('mongoose');
 const { Sequelize, DataTypes } = require('sequelize');
 const bcrypt = require('bcryptjs');
 const clientSessions = require('client-sessions');
-
+app.set('views', __dirname + '/views');
 const app = express();
 
 /* -------------------- BASIC CONFIG -------------------- */
