@@ -19,6 +19,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 const bcrypt = require('bcryptjs');
 const clientSessions = require('client-sessions');
 app.set('views', __dirname + '/views');
+
 const app = express();
 
 /* -------------------- BASIC CONFIG -------------------- */
@@ -62,11 +63,12 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },               // bcrypt hash
   createdAt: { type: Date, default: Date.now },
-}
+},
  {
     collection: 'users',
   }
 );
+
 
 
 const User = mongoose.models.User || mongoose.model('User', userSchema);
