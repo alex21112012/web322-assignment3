@@ -62,9 +62,16 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },               // bcrypt hash
   createdAt: { type: Date, default: Date.now },
-});
+}
+ {
+    collection: 'users',
+  }
+);
 
-const User = mongoose.models.users || mongoose.model('users', userSchema);
+
+const User = mongoose.models.User || mongoose.model('User', userSchema);
+
+
 
 /* ----------------- POSTGRES (TASKS) --------------------- */
 
