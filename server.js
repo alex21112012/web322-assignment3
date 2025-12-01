@@ -10,7 +10,7 @@
 *
 ********************************************************************************/
 
-const pg = require('pg');
+require('pg');
 require('dotenv').config();
 
 const path = require('path');
