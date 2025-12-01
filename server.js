@@ -6,10 +6,11 @@
 *
 * https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
 *
-* Name: ______________________ Student ID: ______________ Date: ______________
+* Name: Aleksandra Plavsic Tubic  Student ID: 134686245 Date: 30.Nov 2025.
 *
 ********************************************************************************/
-// WEB322 – A3 basic implementation
+
+const pg = require('pg');
 require('dotenv').config();
 
 const path = require('path');
